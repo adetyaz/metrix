@@ -1,0 +1,27 @@
+@forward 'colors';
+@forward 'font-sizes';
+@forward 'font-weights';
+@forward 'box-shadow';
+@forward 'flex';
+@use '../abstracts' as *;
+
+.icon-wrapper {
+	padding: 1rem;
+	border-radius: $border-radius;
+
+	&.primary {
+		background: clr(primary, 200);
+	}
+
+	&.accent {
+		background: clr(primary, 100);
+	}
+
+	&.secondary {
+		background: clr(secondary, 100);
+	}
+
+	&.danger {
+		background: clr(danger, 100);
+	}
+}

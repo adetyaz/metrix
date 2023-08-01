@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.chat-box {
+	& > div:nth-of-type(1) {
+		border-bottom: 1px solid clr(neutral, 300);
+	}
+
+	&__details {
+		@extend %flex-gap;
+	}
+
+	&__messages {
+		display: grid;
+		gap: 2rem;
+	}
+
+	&__time {
+		align-self: center;
+	}
+
+	&__shared {
+		@extend %flex-between;
+		border-bottom: 1px solid clr(neutral, 300);
+
+		& > div {
+			@extend %flex-gap;
+		}
+	}
+}

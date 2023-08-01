@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.chat-list {
+	& > form {
+		position: relative;
+	}
+
+	&__search-icon {
+		position: absolute;
+		left: 5%;
+	}
+
+	&__search-input {
+		height: 1.5rem;
+		border-radius: 1rem;
+		padding-inline: 3rem;
+		outline: none;
+		border: 1px solid clr(neutral, 400);
+	}
+}
+
+.chat-list-item {
+	@extend %flex-between;
+	border-bottom: clr(neutral, 300) 1px solid;
+	padding: 1rem;
+
+	&__time {
+		& > span {
+			display: block;
+		}
+	}
+}

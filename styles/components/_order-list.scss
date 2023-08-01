@@ -1,0 +1,9 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.order-list {
+	background: clr(neutral, 100);
+	border-bottom: 1px solid clr(neutral, 300);
+	padding: 1rem;
+	@extend %flex-between;
+}

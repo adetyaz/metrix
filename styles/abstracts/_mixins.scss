@@ -1,0 +1,55 @@
+@use 'sass:meta';
+@use 'sass:math';
+@use 'sass:map';
+@use 'breakpoints' as *;
+
+@mixin mq($size) {
+	@if map.has-key($breakpoints, $size) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else if meta.type-of($size) == number {
+		@if math.is-unitless($size) {
+			@error 'when using a number with @mq() make sure to include a unit';
+		} @else {
+			@media screen and (min-width: $size) {
+				@content;
+			}
+		}
+	} @else {
+		@error 'the keyword #{$size} is not in the $breakpoints map';
+	}
+}
+
+@mixin flex(
+	$flex-direction: row,
+	$justify-content: flex-start,
+	$align-items: stretch
+) {
+	display: flex;
+
+	@if $flex-direction != null {
+		flex-direction: $flex-direction;
+	}
+
+	@if $justify-content != null {
+		justify-content: $justify-content;
+	}
+
+	@if $align-items != null {
+		align-items: $align-items;
+	}
+
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+
+		@if $justify-content == null {
+			justify-content: center;
+		}
+
+		@if $align-items == null {
+			align-items: center;
+		}
+	}
+}

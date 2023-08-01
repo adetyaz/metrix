@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.btn {
+	padding: 0.8rem 2rem;
+	border-radius: $border-radius;
+	outline: none;
+	border: none;
+
+	&__contact {
+		background: clr(neutral, 300);
+		@extend %flex-gap;
+	}
+
+	&__gift {
+		background: clr(secondary, 100);
+		& > div {
+			@extend %flex-gap;
+		}
+	}
+
+	&__danger {
+		background: clr(danger, 100);
+		@extend %flex-gap;
+	}
+}

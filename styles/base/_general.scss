@@ -1,0 +1,41 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+body {
+	font-family: $ff-base;
+	font-weight: $fw-400;
+	font-size: fs(400);
+	color: clr(neutral, 400);
+	line-height: 1.5;
+	background: clr(neutral, 300);
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+}
+
+.dashboard {
+	padding: 2rem 1rem;
+
+	& > div:nth-of-type(1) {
+		@extend %flex-between;
+	}
+
+	&__reports {
+		margin-block: 2rem;
+		@include flex(row, space-between, flex-start);
+	}
+
+	&__inventory {
+		flex-basis: 100%;
+	}
+
+	&__chart-details {
+		@include flex(row, space-between, flex-start);
+
+		& > div {
+			flex-basis: 100%;
+		}
+	}
+}

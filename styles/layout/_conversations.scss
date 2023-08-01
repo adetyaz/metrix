@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.conversations {
+	& > div:nth-of-type(1) {
+		@extend %flex-between;
+	}
+
+	&__chat-box {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		gap: 1rem;
+	}
+}

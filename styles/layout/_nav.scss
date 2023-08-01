@@ -1,0 +1,48 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.side-nav {
+	min-height: 100vh;
+	background: clr(neutral, 100);
+	@include flex(column, flex-start, flex-start);
+	gap: 2rem;
+	padding: 1rem;
+
+	&__logo {
+		@extend %flex-gap;
+		font-size: fs(700);
+		font-family: 'Poppins', sans-serif;
+		font-weight: fw(700);
+	}
+
+	&__items {
+		list-style: none;
+	}
+
+	&__link {
+		@extend %flex-gap;
+		text-decoration: none;
+		color: clr(neutral, 400);
+		font-size: fs(500);
+	}
+
+	&__bottom-links {
+		@extend %flex-gap;
+		justify-self: flex-end;
+		flex-direction: column;
+	}
+}
+
+.nav {
+	@include flex(row, space-between, center);
+	background: clr(neutral, 100);
+	padding: 1rem;
+
+	& > h1 {
+		font-size: fs(600);
+	}
+
+	&__user-details {
+		@extend %flex-gap;
+	}
+}
