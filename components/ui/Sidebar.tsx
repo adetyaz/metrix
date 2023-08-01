@@ -40,9 +40,7 @@ const Sidebar = () => {
 				</button>
 				<Link href='/logout'>
 					<button className='btn btn__danger'>
-						<span className='icon-wrapper danger'>
-							<LogoutIcon />
-						</span>
+						<LogoutIcon />
 						<span>Logout</span>
 					</button>
 				</Link>

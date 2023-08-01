@@ -34,8 +34,6 @@
 
 .sales-card,
 .customer-card,
-.cart-inventory-card,
-.recent-order-card,
 .marketing-card {
 	width: 100%;
 
@@ -44,14 +42,24 @@
 	}
 }
 
+.recent-order-card {
+	gap: 0;
+	width: 100%;
+
+	@include mq(medium) {
+		width: 40%;
+	}
+}
+
 .product-inventory-card {
 	width: 100%;
 	color: clr(neutral, 100);
 	background: clr(primary, 200);
+}
 
-	@include mq(medium) {
-		width: 30%;
-	}
+.cart-inventory-card {
+	width: 100%;
+	margin-block: 2rem;
 }
 
 .marketing-card {
@@ -63,7 +71,18 @@
 			height: 1rem;
 			width: 1rem;
 			border-radius: 50%;
-			background: gold;
+
+			&:nth-child(1) {
+				background: clr(primary, 200);
+			}
+
+			&:nth-child(2) {
+				background: clr(primary, 100);
+			}
+
+			&:nth-child(3) {
+				background: clr(secondary, 100);
+			}
 		}
 	}
 
@@ -72,9 +91,12 @@
 		width: 20rem;
 		border-radius: 50%;
 		background: conic-gradient(
-			clr(secondary, 200),
-			clr(primary, 100),
-			clr(primary, 200)
+			clr(secondary, 200) 0,
+			clr(secondary, 200) 150deg,
+			clr(primary, 100) 150deg,
+			clr(primary, 100) 250deg,
+			clr(primary, 200) 250deg,
+			clr(primary, 200) 360deg
 		);
 		position: relative;
 		z-index: 2;
@@ -115,9 +137,10 @@
 }
 
 .summary-card {
-	width: 80%;
+	margin-top: 2rem;
+	width: 100%;
 	&__chart {
-		@include flex(row, space-evenly, flex-start);
+		@include flex(row, space-around, flex-start);
 		flex-direction: row !important;
 		gap: 2rem;
 		&--numbers {
@@ -133,12 +156,6 @@
 			border-radius: 2rem;
 			position: relative;
 			overflow: hidden;
-
-			& > p {
-				position: relative;
-				bottom: -10%;
-				width: 100ch;
-			}
 
 			&::after {
 				content: '';

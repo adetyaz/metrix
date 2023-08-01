@@ -25,6 +25,7 @@ main {
 	&__reports {
 		margin-block: 2rem;
 		@include flex(row, space-between, flex-start);
+		gap: 2rem;
 	}
 
 	&__inventory {
@@ -33,6 +34,7 @@ main {
 
 	&__chart-details {
 		@include flex(row, space-between, flex-start);
+		gap: 2rem;
 
 		& > div {
 			flex-basis: 100%;

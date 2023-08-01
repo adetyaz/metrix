@@ -22,22 +22,29 @@ const SummaryCard = () => {
 					<span>40k</span>
 					<span>20k</span>
 				</div>
-				<div className='summary-card__chart--bar'>
+
+				<div>
+					<div className='summary-card__chart--bar'></div>
 					<p>Sept 10</p>
 				</div>
-				<div className='summary-card__chart--bar'>
+				<div>
+					<div className='summary-card__chart--bar'></div>
 					<p>Sept 10</p>
 				</div>
-				<div className='summary-card__chart--bar'>
+				<div>
+					<div className='summary-card__chart--bar'></div>
 					<p>Sept 10</p>
 				</div>
-				<div className='summary-card__chart--bar'>
+				<div>
+					<div className='summary-card__chart--bar'></div>
 					<p>Sept 10</p>
 				</div>
-				<div className='summary-card__chart--bar'>
+				<div>
+					<div className='summary-card__chart--bar'></div>
 					<p>Sept 10</p>
 				</div>
-				<div className='summary-card__chart--bar'>
+				<div>
+					<div className='summary-card__chart--bar'></div>
 					<p>Sept 10</p>
 				</div>
 			</div>

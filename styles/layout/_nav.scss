@@ -28,8 +28,9 @@
 
 	&__bottom-links {
 		@extend %flex-gap;
-		justify-self: flex-end;
+		align-items: flex-start;
 		flex-direction: column;
+		margin-top: auto;
 	}
 }
 
