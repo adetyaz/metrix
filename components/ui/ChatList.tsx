@@ -19,6 +19,7 @@ const ChatList = () => {
 			<div>
 				{chats.map((chat) => (
 					<ChatListItem
+						key={chat.id}
 						id={chat.id}
 						name={chat.name}
 						image={chat.image}

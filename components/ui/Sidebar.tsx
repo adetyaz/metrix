@@ -14,7 +14,7 @@ const Sidebar = () => {
 
 			<ul className='side-nav__items'>
 				{navLinks.map((navLink) => (
-					<li>
+					<li key={navLink.link}>
 						<Link href={`/${navLink.link}`} className='side-nav__link'>
 							<span className='icon-wrapper'>{getIcons(navLink.link)}</span>
 							<span>{navLink.link}</span>

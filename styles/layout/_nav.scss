@@ -11,8 +11,8 @@
 	&__logo {
 		@extend %flex-gap;
 		font-size: fs(700);
-		font-family: 'Poppins', sans-serif;
-		font-weight: fw(700);
+		font-family: $ff-accent;
+		font-weight: $fw-700;
 	}
 
 	&__items {
