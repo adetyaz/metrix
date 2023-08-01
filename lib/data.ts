@@ -2,22 +2,22 @@ import { ChatType, NavType, ProductListType } from '@/types'
 
 export const navLinks: NavType[] = [
 	{
-		link: 'Dashboard',
+		link: 'dashboard',
 	},
 	{
-		link: 'Orders',
+		link: 'orders',
 	},
 	{
-		link: 'Customers',
+		link: 'customers',
 	},
 	{
-		link: 'Inventory',
+		link: 'inventory',
 	},
 	{
-		link: 'Conversations',
+		link: 'conversations',
 	},
 	{
-		link: 'Settings',
+		link: 'settings',
 	},
 ]
 
