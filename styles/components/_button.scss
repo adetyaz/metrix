@@ -19,8 +19,17 @@
 		}
 	}
 
+	&__sent {
+		background: clr(secondary, 100);
+		@extend %flex-gap;
+	}
+
 	&__danger {
 		background: clr(danger, 100);
 		@extend %flex-gap;
+	}
+
+	&__primary {
+		background: clr(primary, 200);
 	}
 }

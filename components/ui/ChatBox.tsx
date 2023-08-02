@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { BagIcon } from '../icons'
+import { BagIcon, SentIcon, SmileyIcon } from '../icons'
 
 const ChatBox = () => {
 	return (
@@ -8,7 +8,7 @@ const ChatBox = () => {
 				<div className='chat-box__user'>
 					<Image src='/avatar-2.png' alt='user' height={40} width={40} />
 					<div>
-						<p>Jane doe</p>
+						<p className='chat-box__user-name'>Jane doe</p>
 						<p>online</p>
 					</div>
 				</div>
@@ -33,7 +33,9 @@ const ChatBox = () => {
 							<p>₦730,000.00</p>
 						</div>
 					</div>
-					<p>12 In Stock</p>
+					<p>
+						<span>12</span> In Stock
+					</p>
 				</div>
 				<div className='chat-box__chat chat-box__chat--received'>
 					<div>
@@ -51,6 +53,17 @@ const ChatBox = () => {
 						<span>&gt;</span>
 					</p>
 				</div>
+				<form className='chat-box__form'>
+					<button className='btn btn__gift'>+</button>
+					<input type='text' placeholder='Your message' />
+					<div className='chat-box__smiley-icon'>
+						<SmileyIcon />
+					</div>
+					<button className='btn btn__sent'>
+						<span>Send</span>
+						<SentIcon />
+					</button>
+				</form>
 			</section>
 		</div>
 	)

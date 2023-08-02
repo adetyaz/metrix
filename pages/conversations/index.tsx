@@ -6,7 +6,7 @@ const index = () => {
 			<div className='conversations'>
 				<div>
 					<h2>Conversations with Customers</h2>
-					<button className='btn'>New Message</button>
+					<button className='btn btn__primary'>New Message</button>
 				</div>
 				<div className='conversations__chat-box'>
 					<ChatList />

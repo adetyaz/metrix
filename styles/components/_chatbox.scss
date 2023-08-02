@@ -2,29 +2,121 @@
 @use '../utilities/' as *;
 
 .chat-box {
+	gap: 0;
+	height: fit-content;
+
 	& > div:nth-of-type(1) {
 		border-bottom: 1px solid clr(neutral, 300);
+		height: fit-content;
+	}
+
+	&__user {
+		@extend %flex-gap;
+	}
+
+	&__user-name {
+		font-weight: $fw-700;
+		color: clr(neutral, 500);
 	}
 
 	&__details {
 		@extend %flex-gap;
+		align-items: flex-start;
+
+		& > div:nth-of-type(1) {
+			color: clr(neutral, 500);
+			background: clr(secondary, 200);
+			padding: 0.5rem;
+			text-transform: capitalize;
+			border-radius: $border-radius;
+			font-weight: $fw-700;
+		}
+
+		& > div:nth-of-type(2) {
+			& > p {
+				color: clr(primary, 200);
+			}
+		}
 	}
 
 	&__messages {
 		display: grid;
-		gap: 2rem;
+		gap: 3rem;
+		padding-top: 3rem;
 	}
 
 	&__time {
-		align-self: center;
+		justify-self: center;
+		color: clr(neutral, 500);
+		background: clr(neutral, 300);
+		padding: 0.5rem;
 	}
 
 	&__shared {
 		@extend %flex-between;
 		border-bottom: 1px solid clr(neutral, 300);
+		width: 35%;
+
+		& > p > span {
+			color: clr(primary, 200);
+		}
 
 		& > div {
 			@extend %flex-gap;
 		}
+	}
+
+	&__chat {
+		&--received {
+			& > div {
+				padding: 1rem;
+				background: clr(primary, 200);
+				color: clr(neutral, 100);
+				width: 30%;
+				border-radius: 8px 8px 10px 0px;
+			}
+		}
+
+		&--sent {
+			justify-self: flex-end;
+
+			& > div {
+				padding: 1rem;
+				background: clr(secondary, 200);
+				color: clr(neutral, 500);
+				// width: 30%;
+				border-radius: 8px 8px 0px 8px;
+			}
+		}
+	}
+
+	&__form {
+		position: relative;
+
+		& > input {
+			width: 100%;
+			padding: 1.5rem 6rem;
+			outline: none;
+			border-radius: 0.5rem;
+			font-size: fs(500);
+		}
+
+		& > button:nth-of-type(1) {
+			position: absolute;
+			font-size: fs(600);
+			left: 1%;
+			bottom: 11%;
+		}
+
+		& > button:nth-of-type(2) {
+			position: absolute;
+			right: 1%;
+			top: 18%;
+		}
+	}
+	&__smiley-icon {
+		position: absolute;
+		right: 15%;
+		top: 30%;
 	}
 }

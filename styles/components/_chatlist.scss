@@ -8,13 +8,14 @@
 
 	&__search-icon {
 		position: absolute;
-		left: 5%;
+		left: 2%;
+		top: 15%;
 	}
 
 	&__search-input {
 		height: 1.5rem;
-		border-radius: 1rem;
-		padding-inline: 3rem;
+		border-radius: 0.5rem;
+		padding: 1.5rem 3rem;
 		outline: none;
 		border: 1px solid clr(neutral, 400);
 	}
@@ -22,8 +23,13 @@
 
 .chat-list-item {
 	@extend %flex-between;
+	gap: 1rem;
 	border-bottom: clr(neutral, 300) 1px solid;
 	padding: 1rem;
+
+	&:last-child {
+		border-bottom: none;
+	}
 
 	&__time {
 		& > span {

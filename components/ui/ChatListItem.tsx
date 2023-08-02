@@ -13,7 +13,7 @@ const ChatListItem = ({
 	return (
 		<div className='chat-list-item' key={id}>
 			<div>
-				<Image src={image} alt={name} height={40} width={40} />
+				<Image src={image} alt={name} height={40} width={60} />
 			</div>
 			<div>
 				<h5>{name}</h5>
