@@ -21,7 +21,7 @@
 
 	&__link {
 		@extend %flex-gap;
-		text-decoration: none;
+		text-transform: capitalize;
 		color: clr(neutral, 400);
 		font-size: fs(500);
 	}

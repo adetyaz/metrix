@@ -8,17 +8,17 @@ import {
 } from '@/components/icons'
 
 export const getIcons = (link: string) => {
-	if (link === 'Dashboard') {
+	if (link === 'dashboard') {
 		return <HomeIcon />
-	} else if (link === 'Orders') {
+	} else if (link === 'orders') {
 		return <BagIcon />
-	} else if (link === 'Customers') {
+	} else if (link === 'customers') {
 		return <UsersIcon />
-	} else if (link === 'Inventory') {
+	} else if (link === 'inventory') {
 		return <FolderIcon />
-	} else if (link === 'Conversations') {
+	} else if (link === 'conversations') {
 		return <ChatIcon />
-	} else if (link === 'Settings') {
+	} else if (link === 'settings') {
 		return <SettingsIcon />
 	}
 }

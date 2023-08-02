@@ -6,7 +6,7 @@ const ChatBox = () => {
 		<div className='card chat-box'>
 			<div className='card__top'>
 				<div className='chat-box__user'>
-					<Image src='/avatar-1.png' alt='user' height={40} width={40} />
+					<Image src='/avatar-2.png' alt='user' height={40} width={40} />
 					<div>
 						<p>Jane doe</p>
 						<p>online</p>
@@ -27,7 +27,7 @@ const ChatBox = () => {
 				<div className='chat-box__time'>12 August 2022</div>
 				<div className='chat-box__shared'>
 					<div>
-						<Image src='/iphone-1.png' alt='phone' height={50} width={50} />
+						<Image src='/phone-1.png' alt='phone' height={50} width={50} />
 						<div>
 							<p>Iphone 13</p>
 							<p>₦730,000.00</p>
